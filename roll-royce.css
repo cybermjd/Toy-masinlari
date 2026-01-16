@@ -2,170 +2,146 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-    background-color: #fff;
+    background-color: #f5f6f7;
+    /* Arxa fon boz olanda sayt daha professional görünür */
     padding: 20px;
 }
 
-nav {
+/* Naviqasiya */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
     font-size: 22px;
     font-weight: bold;
-    color: #34495e;
     text-decoration: none;
+    color: #333;
 }
 
-.back-btn {
-    text-decoration: none;
-    color: #666;
-    font-size: 14px;
+.logo span {
+    color: #0984e3;
 }
 
-/* Əsas Konteyner */
+/* Əsas Layout */
 .product-page {
     display: flex;
     max-width: 1100px;
     margin: 0 auto;
-    gap: 40px;
+    gap: 25px;
 }
 
-/* Sol Tərəf */
-.specs-section {
+/* Kart dizaynı (Zəngin göstərən hissə) */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.specs-column {
     flex: 1.2;
 }
 
-h1 {
-    font-size: 24px;
-    color: #2c3e50;
-    margin-bottom: 5px;
-}
-
-.code {
-    color: #999;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.specs-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.specs-table td {
-    padding: 10px 0;
-    border-bottom: 1px solid #f1f1f1;
-    font-size: 15px;
-}
-
-.link-blue {
-    color: #2980b9;
-}
-
-.price-red {
-    color: #e74c3c;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.description-text {
-    margin-top: 20px;
-    line-height: 1.6;
-    color: #333;
-    font-size: 14px;
-}
-
-.description-text p {
-    margin-bottom: 15px;
-}
-
-/* Sağ Tərəf: Qalereya */
-.gallery-section {
+.gallery-column {
     flex: 1;
 }
 
+/* Cədvəl */
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.specs-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.specs-table td:first-child {
+    color: #777;
+    font-weight: 600;
+    width: 40%;
+}
+
+.price-red {
+    color: #d63031;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* Qalereya (Grid-siz Versiya) */
 .main-photo {
     width: 100%;
     height: 350px;
-    background-color: #ddd;
-    background-image: url('roys1.png');
-    /* Şəkil adını bura yaz */
-    background-size: cover;
-    background-position: center;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
+    background: #ddd url('roys1.png') center/cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
 }
 
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    margin-bottom: 20px;
+.thumb-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Şəkillər sığmayanda aşağı düşsün */
+    gap: 8px;
+    margin: 15px 0;
 }
 
 .thumb {
-    height: 70px;
+    /* 3 şəkil yan-yana: (100% / 3) minus boşluqlar */
+    width: calc(33.33% - 6px);
+    height: 80px;
     background-color: #eee;
     background-size: cover;
-    background-position: center;
+    border-radius: 5px;
     border: 1px solid #ddd;
 }
 
-/* Düymələr Stili */
-.action-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/* Düymələr (Grid-siz Versiya) */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .btn {
-    padding: 10px;
+    /* 2 düymə yan-yana: (100% / 2) minus boşluqlar */
+    width: calc(50% - 5px);
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
     background: white;
-    border: 1px solid #dcdde1;
-    border-radius: 4px;
-    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    text-align: left;
+    transition: 0.2s;
 }
 
 .btn-vip {
-    color: #2980b9;
-    border-color: #e84118;
+    border-color: #fab1a0;
+    color: #e17055;
 }
 
 .btn-up {
-    color: #2980b9;
-    border-color: #e84118;
+    border-color: #74b9ff;
+    color: #0984e3;
 }
 
-.btn-edit {
-    color: #2980b9;
-    border-color: #e84118;
+.btn:hover {
+    background: #f9f9f9;
+    transform: translateY(-2px);
 }
-
-.btn-delete {
-    color: #2980b9;
-    border-color: #e84118;
-}
-
-/* Şəkil nümunələri (Bura öz şəkillərini əlavə et) */
-.img-1 {
-    background-image: url('roys1.png');
-}
-
-.img-2 {
-    background-image: url('roys2.png');
-}
-
-/* Digər şəkillər üçün də davam edə bilərsən */
