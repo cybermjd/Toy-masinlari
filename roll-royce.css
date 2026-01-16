@@ -1,157 +1,171 @@
-/* Ümumi tənzimləmələr */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f8f9fa;
-    color: #2d3436;
+    background-color: #fff;
+    padding: 20px;
 }
 
-/* Naviqasiya - Daha premium görünüş */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: white;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: #0984e3;
-    /* Mavi tonlar daha ciddi və bahalı görünür */
+    font-size: 22px;
+    font-weight: bold;
+    color: #34495e;
     text-decoration: none;
-    letter-spacing: -1px;
 }
 
-.back-link {
-    color: #636e72;
+.back-btn {
     text-decoration: none;
-    font-weight: 600;
+    color: #666;
     font-size: 14px;
-    transition: 0.3s;
 }
 
-.back-link:hover {
-    color: #0984e3;
-}
-
-/* Səhifə Konteyneri */
+/* Əsas Konteyner */
 .product-page {
     display: flex;
-    max-width: 1200px;
-    margin: 40px auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
-    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
 }
 
-/* Sol Tərəf - İnformasiya */
+/* Sol Tərəf */
 .specs-section {
-    flex: 1;
+    flex: 1.2;
 }
 
-.specs-section h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #2d3436;
+h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 5px;
 }
 
 .code {
-    color: #b2bec3;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
-/* Cədvəl - Göndərdiyin şəkildəki kimi səliqəli */
 .specs-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 30px;
 }
 
 .specs-table td {
-    padding: 15px 10px;
-    border-bottom: 1px solid #f1f2f6;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
     font-size: 15px;
 }
 
-.specs-table td:first-child {
-    color: #636e72;
-    font-weight: 600;
-    width: 40%;
+.link-blue {
+    color: #2980b9;
 }
 
 .price-red {
-    color: #d63031;
-    font-size: 28px;
-    font-weight: 800;
+    color: #e74c3c;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-/* Sağ Tərəf - Qalereya */
+.description-text {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 14px;
+}
+
+.description-text p {
+    margin-bottom: 15px;
+}
+
+/* Sağ Tərəf: Qalereya */
 .gallery-section {
-    flex: 1.2;
+    flex: 1;
 }
 
 .main-photo {
     width: 100%;
-    height: 450px;
+    height: 350px;
+    background-color: #ddd;
+    background-image: url('roys1.png');
+    /* Şəkil adını bura yaz */
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    background-image: url('https://masinlar.az/thumbs/2021/05/25/1621935252_rolls-royce-ghost.jpg');
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
-.thumbnails {
-    display: flex;
-    gap: 12px;
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
 }
 
 .thumb {
-    flex: 1;
-    height: 80px;
-    border-radius: 8px;
+    height: 70px;
+    background-color: #eee;
     background-size: cover;
     background-position: center;
+    border: 1px solid #ddd;
+}
+
+/* Düymələr Stili */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px;
+    background: white;
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
-    border: 2px solid transparent;
+    text-align: left;
 }
 
-.thumb:hover {
-    border-color: #0984e3;
-    transform: translateY(-3px);
+.btn-vip {
+    color: #2980b9;
+    border-color: #e84118;
 }
 
-/* Düymələr */
-.btn-reserve {
-    background: #0984e3;
-    color: white;
-    width: 100%;
-    padding: 18px;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 6px 20px rgba(9, 132, 227, 0.3);
+.btn-up {
+    color: #2980b9;
+    border-color: #e84118;
 }
 
-.btn-reserve:hover {
-    background: #074b81;
-    transform: translateY(-2px);
+.btn-edit {
+    color: #2980b9;
+    border-color: #e84118;
 }
+
+.btn-delete {
+    color: #2980b9;
+    border-color: #e84118;
+}
+
+/* Şəkil nümunələri (Bura öz şəkillərini əlavə et) */
+.img-1 {
+    background-image: url('roys1.png');
+}
+
+.img-2 {
+    background-image: url('roys2.png');
+}
+
+/* Digər şəkillər üçün də davam edə bilərsən */
